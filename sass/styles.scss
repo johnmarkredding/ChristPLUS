@@ -1,0 +1,81 @@
+@import 'reset';
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+@import 'fonts';
+
+$bg1:#44BD93;
+$bg2:#FF3649;
+$font1:#fff;
+$font2:#000;
+
+
+
+footer {
+    text-align: center;
+    border-top: 1px dashed #aaa;
+    
+    p {
+        padding: 2vw;
+        margin: 0;
+    }
+}
+
+
+
+html {
+    @include image-rendering(optimizeSpeed);
+    @include font-feature-settings("pnum", "kern", "liga");
+    color: $font2;
+}
+
+img, embed, object, video {display:block;max-width:100%;}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box; // Safari <= 5
+     -moz-box-sizing: border-box; // Firefox <= 19
+          box-sizing: border-box;
+}
+
+header {
+    padding-top: 15vw;
+    padding-bottom: 15vw;
+    text-align: center;
+    
+    background-color: $bg2;
+    color:$font1;
+}
+
+section {
+    width: 100%;
+    padding: 10vw 1vw;
+    
+    article {
+        
+        img {
+            border-radius: 5px;
+            display: block;
+            margin: 1rem auto;
+        }
+
+        width: 90%;
+        margin: auto;
+    }
+    
+    @media screen and (min-width: 600px) {
+    article {width:75%;}
+    }
+    @media screen and (min-width: 768px) {
+        article {width:65%;}
+    }
+    @media screen and (min-width: 1024px) {
+        article {width:55%;}
+    }
+    @media screen and (min-width: 1200px) {
+        article {width:45%;}
+    }
+}
+
+section:nth-of-type(even) {
+    color: $font1;
+    background-color: $bg1;
+}

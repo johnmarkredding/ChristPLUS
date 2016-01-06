@@ -1,0 +1,202 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+html {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%; }
+  @media screen and (min-width: 768px) {
+    html {
+      font-size: 20px; } }
+  @media screen and (min-width: 1024px) {
+    html {
+      font-size: 22px; } }
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin-top: 0;
+  margin-bottom: 1.25rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 100; }
+
+p, ul, ol {
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 145%;
+  font-size: 1rem; }
+
+h1 {
+  font-size: 3.5rem; }
+
+h2 {
+  font-size: 2.369rem; }
+
+h3 {
+  font-size: 1.777rem; }
+
+h4 {
+  font-size: 1.333rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6, small, .fontSmall {
+  font-size: .75rem; }
+
+em {
+  font-style: italic;
+  font-weight: 400; }
+
+header h1 {
+  font-size: 14vw; }
+
+footer {
+  text-align: center;
+  border-top: 1px dashed #aaa; }
+  footer p {
+    padding: 2vw;
+    margin: 0; }
+
+html {
+  image-rendering: optimizeSpeed;
+  -webkit-font-feature-settings: "pnum", "kern", "liga";
+  -moz-font-feature-settings: "pnum", "kern", "liga";
+  -ms-font-feature-settings: "pnum", "kern", "liga";
+  font-feature-settings: "pnum", "kern", "liga";
+  color: #000; }
+
+img, embed, object, video {
+  display: block;
+  max-width: 100%; }
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+header {
+  padding-top: 15vw;
+  padding-bottom: 15vw;
+  text-align: center;
+  background-color: #FF3649;
+  color: #fff; }
+
+section {
+  width: 100%;
+  padding: 10vw 1vw; }
+  section article {
+    width: 90%;
+    margin: auto; }
+    section article img {
+      border-radius: 5px;
+      display: block;
+      margin: 1rem auto; }
+  @media screen and (min-width: 600px) {
+    section article {
+      width: 75%; } }
+  @media screen and (min-width: 768px) {
+    section article {
+      width: 65%; } }
+  @media screen and (min-width: 1024px) {
+    section article {
+      width: 55%; } }
+  @media screen and (min-width: 1200px) {
+    section article {
+      width: 45%; } }
+
+section:nth-of-type(even) {
+  color: #fff;
+  background-color: #44BD93; }
+
+/*# sourceMappingURL=styles.css.map */
