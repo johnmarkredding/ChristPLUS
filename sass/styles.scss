@@ -12,10 +12,10 @@ $font2:#000;
 
 footer {
     text-align: center;
-    border-top: 1px dashed #aaa;
+    border-top: 2px dashed #aaa;
     
     p {
-        padding: 2vw;
+        padding: 1rem;
         margin: 0;
     }
 }
@@ -37,8 +37,8 @@ img, embed, object, video {display:block;max-width:100%;}
 }
 
 header {
-    padding-top: 15vw;
-    padding-bottom: 15vw;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
     text-align: center;
     
     background-color: $bg2;
@@ -48,11 +48,12 @@ header {
 section {
     width: 100%;
     padding: 10vw 1vw;
+    clear: both;
     
     article {
         
         img {
-            border-radius: 5px;
+            border-radius: 3px;
             display: block;
             margin: 1rem auto;
         }
@@ -62,9 +63,11 @@ section {
     }
     
     @media screen and (min-width: 600px) {
-    article {width:75%;}
+        article {width:75%;}
     }
     @media screen and (min-width: 768px) {
+        .btn{@include span-columns(6);}
+
         article {width:65%;}
     }
     @media screen and (min-width: 1024px) {
@@ -73,9 +76,62 @@ section {
     @media screen and (min-width: 1200px) {
         article {width:45%;}
     }
+    
+    &:nth-of-type(even) {
+        color: $font1;
+        background-color: $bg1;
+        .btn {
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            transition-duration: .5s;
+            padding: .5rem;
+            text-decoration: none;
+
+            border: 2px solid #fff;
+            background-color: $bg1;
+            color: #fff;
+
+            &:hover {    
+                background-color: #fff;
+                color: $bg1;
+            }
+        }
+    }
 }
 
-section:nth-of-type(even) {
-    color: $font1;
-    background-color: $bg1;
+
+.triangle {
+    margin: auto;
+    width: 0;
+    height: 0;
+    border: 4vw transparent solid;
+    border-top: 5vw solid #FF3649;
+    border-bottom: 0px;
+}
+
+.btn {
+    @include span-columns(12);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    border: 2px solid $bg1;
+    border-radius: 3px;
+    text-align: center;
+    display: block;
+    transition-duration: .5s;
+    padding: .5rem;
+    background-color: #fff;
+    color: $bg1;
+    text-decoration: none;
+    
+    &:hover {    
+        background-color: $bg1;
+        color: #fff;
+    }
+}
+
+sup {
+    font-size: .75em;
+    vertical-align: super;
 }
