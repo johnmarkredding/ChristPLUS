@@ -92,12 +92,12 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-html {
+body {
   color: #000;
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 18px;
   font-weight: 300;
-  line-height: 1.6; }
+  line-height: 160%; }
 
 .h1, .typography h1, .typography .h1, .h2, .typography h2, .typography .h2, .h3, .typography h3, .typography .h3, .h4, .typography h4, .typography .h4, .h5, .typography h5, .typography .h5, .h6, .typography h6, .typography .h6 {
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
@@ -129,7 +129,7 @@ html {
 .fixed, .typography pre, .typography code {
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 14px;
-  line-height: 1.5; }
+  line-height: 150%; }
 
 .quiet {
   font-color: #44BD93; }
@@ -165,23 +165,12 @@ html {
 .typography h6, .typography h6, .typography .h6 {
   margin: 1em 0 0.5em; }
 
-header h1 {
-  font-size: 50vw; }
+.centered, .btn-text, .button, .reversed-button, .nav-button, footer {
+  text-align: center; }
 
-footer {
-  text-align: center;
-  border-top: 1px dashed #aaa; }
-  footer p {
-    padding: 1rem;
-    margin: 0; }
-
-html {
-  image-rendering: optimizeSpeed;
-  -webkit-font-feature-settings: "pnum", "kern", "liga";
-  -moz-font-feature-settings: "pnum", "kern", "liga";
-  -ms-font-feature-settings: "pnum", "kern", "liga";
-  font-feature-settings: "pnum", "kern", "liga";
-  color: #000; }
+.btn-text, .button, .reversed-button, .nav-button {
+  text-transform: uppercase;
+  text-decoration: none; }
 
 img, embed, object, video {
   display: block;
@@ -192,93 +181,108 @@ img, embed, object, video {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-header {
-  padding-top: 12vw;
-  padding-bottom: 12vw;
-  text-align: center;
-  background-color: #FF3649;
-  color: #fff; }
+sup {
+  font-size: .75em;
+  vertical-align: super; }
 
-section {
-  width: 100%;
-  padding: 10vw 1vw;
-  clear: both; }
-  section article {
-    width: 90%;
-    margin: auto; }
-    section article img {
-      border-radius: 3px;
-      display: block;
-      margin: 1rem auto; }
-  @media screen and (min-width: 600px) {
-    section article {
-      width: 75%; } }
-  @media screen and (min-width: 768px) {
-    section .btn {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%; }
-      section .btn:last-child {
-        margin-right: 0; }
-    section article {
-      width: 65%; } }
-  @media screen and (min-width: 1024px) {
-    section article {
-      width: 55%; } }
-  @media screen and (min-width: 1200px) {
-    section article {
-      width: 45%; } }
-  section:nth-of-type(even) {
-    color: #fff;
-    background-color: #44BD93; }
-    section:nth-of-type(even) .btn {
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      text-align: center;
-      display: block;
-      transition-duration: .5s;
-      padding: .5rem;
-      text-decoration: none;
-      border: 1px solid #fff;
-      background-color: #44BD93;
-      color: #fff; }
-      section:nth-of-type(even) .btn:hover {
-        background-color: #fff;
-        color: #44BD93; }
+sub {
+  font-size: .75em;
+  vertical-align: sub; }
 
-.triangle {
-  margin: auto;
-  width: 0;
-  height: 0;
-  border: 6vw transparent solid;
-  border-top: 5vw solid #FF3649;
-  border-bottom: 0px; }
-
-.btn {
+.button, .reversed-button {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
   border: 1px solid #44BD93;
-  border-radius: 3px;
-  text-align: center;
-  display: block;
   transition-duration: .5s;
-  padding: .5rem;
   background-color: #fff;
   color: #44BD93;
-  text-decoration: none; }
-  .btn:last-child {
+  margin-bottom: 1rem;
+  padding: 1rem; }
+  .button:last-child, .reversed-button:last-child {
     margin-right: 0; }
-  .btn:hover {
-    background-color: #44BD93;
-    color: #fff; }
+  .button:hover, .reversed-button:hover {
+    color: #fff;
+    background-color: #44BD93; }
+  .button:first-child, .reversed-button:first-child {
+    margin-top: 1rem; }
 
-sup {
-  font-size: .75em;
-  vertical-align: super; }
+.reversed-button {
+  border: 1px solid #fff;
+  transition-duration: .5s;
+  background-color: #44BD93;
+  color: #fff; }
+  .reversed-button:hover {
+    color: #44BD93;
+    background-color: #fff; }
+
+body {
+  image-rendering: optimizeSpeed;
+  -webkit-font-feature-settings: "pnum", "kern", "liga";
+  -moz-font-feature-settings: "pnum", "kern", "liga";
+  -ms-font-feature-settings: "pnum", "kern", "liga";
+  font-feature-settings: "pnum", "kern", "liga";
+  color: #000; }
+
+header {
+  overflow: auto;
+  padding: 10vw;
+  padding-top: 5vw;
+  text-align: center;
+  background-color: #FF3649;
+  color: #fff; }
+  header h1 {
+    margin: 0; }
+  header p {
+    margin: 0; }
+
+section {
+  overflow: auto;
+  width: 100%; }
+  section:nth-of-type(even) {
+    color: #fff;
+    background-color: #44BD93; }
+
+article {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  margin: auto; }
+  article::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+footer {
+  border: 1px solid #44BD93;
+  border-style: dashed;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0; }
+
+@media screen and (min-width: 400px) {
+  article {
+    width: 80%; } }
+@media screen and (min-width: 768px) {
+  .button, .reversed-button {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .button:last-child, .reversed-button:last-child {
+      margin-right: 0; }
+    .button:last-child, .reversed-button:last-child {
+      margin-top: 1rem; }
+
+  article {
+    width: 65%; } }
+@media screen and (min-width: 1024px) {
+  article {
+    width: 55%; } }
+@media screen and (min-width: 1200px) {
+  article {
+    width: 37%; } }
 
 /*# sourceMappingURL=styles.css.map */

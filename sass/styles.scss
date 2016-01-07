@@ -3,135 +3,136 @@
 @import 'neat/neat';
 @import 'typography';
 
-$bg1:#44BD93;
-$bg2:#FF3649;
-$font1:#fff;
-$font2:#000;
-
-
-
-footer {
-    text-align: center;
-    border-top: 1px dashed #aaa;
+@mixin border($border-color){    
+    border: 1px solid $border-color;
+}
+@mixin transition($text-color, $bg-color) {
+    transition-duration:.5s;
     
-    p {
-        padding: 1rem;
-        margin: 0;
-    }
-}
-
-
-
-html {
-    @include image-rendering(optimizeSpeed);
-    @include font-feature-settings("pnum", "kern", "liga");
-    color: $font2;
-}
-
-img, embed, object, video {display:block;max-width:100%;}
-
-*, *:after, *:before {
-  -webkit-box-sizing: border-box; // Safari <= 5
-     -moz-box-sizing: border-box; // Firefox <= 19
-          box-sizing: border-box;
-}
-
-header {
-    padding-top: 12vw;
-    padding-bottom: 12vw;
-    text-align: center;
+    background-color: $bg-color;
+    color: $text-color;
     
-    background-color: $bg2;
-    color:$font1;
-}
-
-section {
-    width: 100%;
-    padding: 10vw 1vw;
-    clear: both;
-    
-    article {
-        
-        img {
-            border-radius: 3px;
-            display: block;
-            margin: 1rem auto;
-        }
-
-        width: 90%;
-        margin: auto;
-    }
-    
-    @media screen and (min-width: 600px) {
-        article {width:75%;}
-    }
-    @media screen and (min-width: 768px) {
-        .btn{@include span-columns(6);}
-
-        article {width:65%;}
-    }
-    @media screen and (min-width: 1024px) {
-        article {width:55%;}
-    }
-    @media screen and (min-width: 1200px) {
-        article {width:45%;}
-    }
-    
-    &:nth-of-type(even) {
-        color: $font1;
-        background-color: $bg1;
-        .btn {
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            text-align: center;
-            display: block;
-            transition-duration: .5s;
-            padding: .5rem;
-            text-decoration: none;
-
-            border: 1px solid #fff;
-            background-color: $bg1;
-            color: #fff;
-
-            &:hover {    
-                background-color: #fff;
-                color: $bg1;
-            }
-        }
+    &:hover {
+        color: $bg-color;
+        background-color: $text-color;
     }
 }
 
+//Variables//
+$body-color:#000;
+$body-color2:#fff;
+$quiet-color:#44BD93;
+$loud-color:#FF3649;
 
-.triangle {
-    margin: auto;
-    width: 0;
-    height: 0;
-    border: 6vw transparent solid;
-    border-top: 5vw solid #FF3649;
-    border-bottom: 0px;
-}
+$break-small: 400px;
+$break-medium: 768px;
+$break-large: 1024px;
+$break-x-large: 1200px;
 
-.btn {
-    @include span-columns(12);
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    border: 1px solid $bg1;
-    border-radius: 3px;
-    text-align: center;
+$button-span-small: 12;
+$button-span-large: 6;
+
+img, embed, object, video {
     display: block;
-    transition-duration: .5s;
-    padding: .5rem;
-    background-color: #fff;
-    color: $bg1;
-    text-decoration: none;
-    
-    &:hover {    
-        background-color: $bg1;
-        color: #fff;
-    }
+    max-width: 100%;
 }
+*, *:after, *:before {
+    -webkit-box-sizing: border-box; // Safari <= 5
+    -moz-box-sizing: border-box; // Firefox <= 19
+    box-sizing: border-box;
+}
+
+
+//-----------STYLES----------//
 
 sup {
     font-size: .75em;
     vertical-align: super;
+}
+sub {
+    font-size: .75em;
+    vertical-align: sub;
+}
+
+.button {
+    @extend .btn-text;
+    @include span-columns($button-span-small);
+    @include border($quiet-color);
+    @include transition($quiet-color, $body-color2);
+    margin-bottom: 1rem;
+    &:first-child {
+        margin-top: 1rem;
+    }
+    padding: 1rem;
+}
+.reversed-button {
+    @extend .button;
+    @include border($body-color2);
+    @include transition($body-color2, $quiet-color);
+}
+.nav-button {
+    @extend .btn-text;
+}
+
+body {
+    @include image-rendering(optimizeSpeed);
+    @include font-feature-settings("pnum", "kern", "liga");
+    color: $body-color;
+}
+
+header {
+    overflow: auto;
+    padding: 10vw;
+    padding-top: 5vw;
+    text-align: center;    
+    background-color: $loud-color;
+    color:$body-color2;
+    
+    h1 { margin: 0; }
+    p { margin: 0; }
+}
+
+section {
+    overflow: auto;
+    width: 100%;
+    
+    &:nth-of-type(even) {
+        color: $body-color2;
+        background-color: $quiet-color;
+    }
+}
+
+article {
+    @include outer-container;
+    width: 95%;
+    margin: auto;
+}
+
+footer {
+    @extend .centered;
+    @include border($quiet-color);
+    border-style: dashed;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+@media screen and (min-width: $break-small) {
+    article { width: 80%; }
+}
+@media screen and (min-width: $break-medium) {
+    .button {
+        @include span-columns($button-span-large);
+        
+        &:last-child {
+            margin-top: 1rem;
+        }
+    }
+    article { width: 65%; }
+}
+@media screen and (min-width: $break-large) {    
+    article { width: 55%; }
+}
+@media screen and (min-width: $break-x-large) {    
+    article { width: 37%; }
 }
