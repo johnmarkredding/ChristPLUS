@@ -198,15 +198,13 @@ sub {
   transition-duration: .5s;
   background-color: #fff;
   color: #44BD93;
-  margin-bottom: 1rem;
-  padding: 1rem; }
+  padding: 1rem;
+  margin-bottom: 1rem; }
   .button:last-child, .reversed-button:last-child {
     margin-right: 0; }
   .button:hover, .reversed-button:hover {
     color: #fff;
     background-color: #44BD93; }
-  .button:first-child, .reversed-button:first-child {
-    margin-top: 1rem; }
 
 .reversed-button {
   border: 1px solid #fff;
@@ -270,11 +268,10 @@ footer {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%; }
+    width: 48.82117%;
+    margin-bottom: 1rem; }
     .button:last-child, .reversed-button:last-child {
       margin-right: 0; }
-    .button:last-child, .reversed-button:last-child {
-      margin-top: 1rem; }
 
   article {
     width: 65%; } }

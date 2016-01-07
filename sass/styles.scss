@@ -59,11 +59,8 @@ sub {
     @include span-columns($button-span-small);
     @include border($quiet-color);
     @include transition($quiet-color, $body-color2);
-    margin-bottom: 1rem;
-    &:first-child {
-        margin-top: 1rem;
-    }
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 .reversed-button {
     @extend .button;
@@ -123,10 +120,7 @@ footer {
 @media screen and (min-width: $break-medium) {
     .button {
         @include span-columns($button-span-large);
-        
-        &:last-child {
-            margin-top: 1rem;
-        }
+        margin-bottom: 1rem;
     }
     article { width: 65%; }
 }
