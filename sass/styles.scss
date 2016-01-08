@@ -1,6 +1,8 @@
 @import 'reset';
 @import 'bourbon/bourbon';
 @import 'neat/neat';
+@import 'base/base';
+@import 'nav';
 @import 'typography';
 
 @mixin border($border-color){    
@@ -22,7 +24,7 @@
 $body-color:#000;
 $body-color2:#fff;
 $quiet-color:#44BD93;
-$loud-color:#FF3649;
+$loud-color:#44BD93;
 
 $break-small: 400px;
 $break-medium: 768px;
@@ -87,6 +89,14 @@ header {
     
     h1 { margin: 0; }
     p { margin: 0; }
+}
+header.home, header.blog {
+    overflow:visible;
+    padding: 0;
+    padding-top: 0;
+    text-align: inherit;    
+    background-color: $loud-color;
+    color:$body-color2;
 }
 
 section {
