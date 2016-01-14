@@ -8,8 +8,7 @@
 @mixin border($border-color){    
     border: 1px solid $border-color;
 }
-@mixin transition($text-color, $bg-color) {
-    transition-duration:.5s;
+@mixin hover($text-color, $bg-color) {
     
     background-color: $bg-color;
     color: $text-color;
@@ -60,14 +59,14 @@ sub {
     @extend .btn-text;
     @include span-columns($button-span-small);
     @include border($quiet-color);
-    @include transition($quiet-color, $body-color2);
+    @include hover($quiet-color, $body-color2);
     padding: 1rem;
     margin-bottom: 1rem;
 }
 .reversed-button {
     @extend .button;
     @include border($body-color2);
-    @include transition($body-color2, $quiet-color);
+    @include hover($body-color2, $quiet-color);
 }
 .nav-button {
     @extend .btn-text;
@@ -139,4 +138,15 @@ footer {
 }
 @media screen and (min-width: $break-x-large) {    
     article { width: 37%; }
+}
+
+
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-top: .25rem;
+  fill: $body-color2;
+  &:hover {fill: $body-color;}
+  
 }

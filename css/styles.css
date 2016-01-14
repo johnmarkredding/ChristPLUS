@@ -547,7 +547,6 @@ sub {
   margin-right: 2.35765%;
   width: 100%;
   border: 1px solid #44BD93;
-  transition-duration: .5s;
   background-color: #fff;
   color: #44BD93;
   padding: 1rem;
@@ -560,7 +559,6 @@ sub {
 
 .reversed-button {
   border: 1px solid #fff;
-  transition-duration: .5s;
   background-color: #44BD93;
   color: #fff; }
   .reversed-button:hover {
@@ -641,5 +639,12 @@ footer {
 @media screen and (min-width: 1200px) {
   article {
     width: 37%; } }
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-top: .25rem;
+  fill: #fff; }
+  .logo:hover {
+    fill: #000; }
 
 /*# sourceMappingURL=styles.css.map */
