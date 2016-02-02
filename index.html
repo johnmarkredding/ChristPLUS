@@ -10,7 +10,7 @@
     <body class="typography">
         <header>
             <h1 id="Logo">Christianity<sup>+</sup></h1>
-            <p>Sharing <em>good</em> ideas from around the world.</p>
+            <p>Sharing <b>good</b> ideas from around the world.</p>
         </header>
         <section class="styling">
             <article>
@@ -43,11 +43,11 @@
         <footer>
             <p>A Christian Transhumanist Site</p>
         </footer>
-    </body>
-    
-    <script src="fittext.js"></script>
-
-    <script type="text/javascript">
-        fitText(document.getElementById('Logo'))
-    </script>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="jquery.fittext.js"></script>
+		<script>
+			jQuery("#Logo").fitText(1, { minFontSize: '40rem'});
+		</script>
+	</body>
 </html>

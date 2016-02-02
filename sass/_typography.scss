@@ -71,3 +71,12 @@ body {
     text-transform: uppercase;
     text-decoration: none;
 }
+
+sup {
+    font-size: .75em;
+    vertical-align: super;
+}
+sub {
+    font-size: .75em;
+    vertical-align: sub;
+}

@@ -46,15 +46,6 @@ img, embed, object, video {
 
 //-----------STYLES----------//
 
-sup {
-    font-size: .75em;
-    vertical-align: super;
-}
-sub {
-    font-size: .75em;
-    vertical-align: sub;
-}
-
 .button {
     @extend .btn-text;
     @include span-columns($button-span-small);
